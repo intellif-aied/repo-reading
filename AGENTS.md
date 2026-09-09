@@ -49,7 +49,7 @@ uvx showboat --workdir ../<repo> verify walkthrough.md
 
 绘图前加载已安装的 `diagram-design:diagram-design` 技能及所选图型的 reference，按技能执行风格、布局和输出检查。使用技能发现的路径，不在本仓库固定某台机器的插件版本路径。
 
-- 在本分析仓库根目录检查 `.diagram-design`，按技能的 profiles 规则解析。首次绘图的风格选择遵循技能 onboarding；仅在用户已选择后持久化 profile/default 标记。
+- 本分析仓库每次绘图均直接使用技能默认风格（浅灰底、橙色重点），视为用户已长期确认，跳过首次风格询问与 onboarding。仅当用户明确要求其他风格时才覆盖此约定。
 - 默认交付 `architecture.html`（组件、职责与依赖）和 `flow.html`（贯穿示例的核心执行流程）。如有多条独立流程，以有意义的文件名拆图；流程按内容选用 flowchart、sequence 或 data flow。
 - 绘制前简短说明图型、语义模式（适用时）、尺寸及拆分范围。默认静态 HTML、`doc-wide` 尺寸，具体布局按所选 reference 执行。
 - 图中节点与关系必须能追溯到本次阅读的源码；概览和细节分开，遵守技能复杂度预算。为关键组件/步骤提供源码链接，并与 walkthrough 的章节互相引用。

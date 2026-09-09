@@ -5,3 +5,4 @@
 | 已分析仓库 | GitHub Pages |
 | --- | --- |
 | [LayerFS](layerfs-analysis/README.md) | [架构图](https://intellif-aied.github.io/repo-reading/layerfs-analysis/architecture.html) |
+| [TeamAI CLI](teamai-cli-analysis/README.md) | [架构图](https://intellif-aied.github.io/repo-reading/teamai-cli-analysis/architecture.html) · [同步流程图](https://intellif-aied.github.io/repo-reading/teamai-cli-analysis/flow.html) |
