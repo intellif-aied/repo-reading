@@ -2627,7 +2627,7 @@ The main route covers all ten implementation crates. It intentionally selects re
 
 ## 30. Architecture overview
 
-Open the [LayerFS architecture diagram](architecture.html) in a browser. It is a self-contained HTML file with inline SVG, using the approved default palette. Read the entry point and coordinator first, then the alternative projections, shared mutable model, host content algorithms and Store.
+Open the [LayerFS architecture diagram](https://intellif-aied.github.io/repo-reading/layerfs-analysis/architecture.html) in a browser. It is a self-contained HTML file with inline SVG, using the approved default palette. Read the entry point and coordinator first, then the alternative projections, shared mutable model, host content algorithms and Store.
 
 The diagram emphasizes two owners: Workspaces coordinates the mutable session, while the Store controls history publication. The FUSE live owner may run locally or on the execution side in a container; canonical construction and SQLite remain on the host. Materialization writes an ordinary directory and captures its changes before commit. The portable core supplies live-state transformations to the adapters.
 

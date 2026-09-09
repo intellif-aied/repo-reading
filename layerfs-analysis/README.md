@@ -1,7 +1,7 @@
 # LayerFS source analysis
 
 - [Linear source walkthrough](walkthrough.md): 30 sections, with 78 executable source excerpts captured by Showboat.
-- [Architecture diagram](architecture.html): open the HTML file in a browser; inline SVG and CSS, with optional Google Fonts.
+- [Rendered architecture diagram](https://intellif-aied.github.io/repo-reading/layerfs-analysis/architecture.html): served by GitHub Pages; [HTML source](architecture.html), with inline SVG/CSS and optional Google Fonts.
 
 Analyzed source revision: `46308986aec091337573227ede6c35aff7db11f2` (LayerFS 0.1.3).
 
