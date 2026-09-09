@@ -76,6 +76,19 @@ python3 -m http.server 8000 --directory _site
 
 发布由 `.github/workflows/pages.yml` 管理：推送到 `master` 后自动部署，也可从 Actions 手动运行 **Deploy GitHub Pages**。仓库设置需为 **Settings → Pages → Source → GitHub Actions**。完成本地分析不意味着要求提交或推送；发布操作按用户指令执行。
 
+### SSH 推送故障处理
+
+若 GitHub SSH 22 端口连接被重置或超时，可使用 GitHub 的 `ssh.github.com:443`：仍是 SSH 协议，使用原有 SSH key 认证，并非 HTTPS。先检查 `git config --local --get core.sshCommand`；本地连接配置保存在 `.git/config`，不会随克隆传播。
+
+首次连接需将服务器主机指纹与 [GitHub 官方说明](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port) 核对后再保存到 `~/.ssh/known_hosts`。不要关闭主机密钥验证。确认后可仅为当前仓库设置：
+
+```sh
+git config --local core.sshCommand 'ssh -o Hostname=ssh.github.com -p 443 -o StrictHostKeyChecking=yes'
+git push origin master
+```
+
+推送仍需用户授权；连接失败时分别检查网络、主机信任和用户密钥认证，不能仅凭连接错误判定 SSH key 无效。
+
 ## 完成检查
 
 - walkthrough 按规划贯穿关键实现，摘录由 Showboat 捕获且 verify 通过。
