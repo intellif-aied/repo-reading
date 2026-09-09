@@ -21,7 +21,7 @@ uvx showboat --workdir ../teamai-cli verify walkthrough.md
 
 图表使用默认浅灰底、橙色重点，静态 HTML 内嵌 SVG/CSS，画布 1280×720。中文字体离线时可能回退系统字体。架构图将同类工具、资源及 Provider 合并；流程图聚焦普通 Git，同步异常、self/HTTP 分支在文字中说明。
 
-发布方式：推送到分析仓库 `master` 后，由 `Deploy GitHub Pages` 工作流自动部署。页面地址：
+发布方式：推送到分析仓库 `master` 后，由 `Deploy GitHub Pages` 工作流自动部署。统一入口：[TeamAI CLI 分析目录](https://intellif-aied.github.io/repo-reading/teamai-cli-analysis/)。子页面：
 
 - [架构图](https://intellif-aied.github.io/repo-reading/teamai-cli-analysis/architecture.html)
 - [同步流程图](https://intellif-aied.github.io/repo-reading/teamai-cli-analysis/flow.html)

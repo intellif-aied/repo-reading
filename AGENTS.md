@@ -58,11 +58,12 @@ uvx showboat --workdir ../<repo> verify walkthrough.md
 
 ## 4. 索引与 GitHub Pages
 
-`<repo>-analysis/README.md` 记录源码版本、walkthrough 和图表入口、Showboat 重放命令、校验结果与限制。根 `README.md` 只保留已完成分析的仓库列表及 GitHub Pages URL，操作步骤统一维护在本文件。
+`<repo>-analysis/README.md` 记录源码版本、walkthrough 和图表入口、Showboat 重放命令、校验结果与限制。根 `README.md` 每个已完成分析的仓库只保留一个入口，指向该仓库的 GitHub Pages 分析目录，操作步骤统一维护在本文件。
 
 - Pages 首页：`https://intellif-aied.github.io/repo-reading/`。
+- 仓库分析目录：`https://intellif-aied.github.io/repo-reading/<repo>-analysis/`。站点首页每个仓库只列一个入口，多份分析在仓库目录页分成独立子页。
 - 图表页面路径：`https://intellif-aied.github.io/repo-reading/<repo>-analysis/<file>.html`。
-- `tools/build_pages.py` 只收集 Git 已跟踪的 HTML 和静态资源，保留相对路径并生成首页；Markdown 不会转换为网页。
+- `tools/build_pages.py` 只收集 Git 已跟踪的 HTML 和静态资源，保留相对路径，按顶层 `<repo>-analysis/` 分组生成站点首页和仓库目录页；已有的仓库 `index.html` 优先保留。Markdown 不会转换为网页，已跟踪的 walkthrough 链接到 GitHub。
 - HTML 中引用 walkthrough 应使用本分析仓库的 GitHub blob URL，引用源码应使用 upstream 的 commit 固定链接。相对的源码 checkout 路径无法在 Pages 上访问。
 
 从仓库根目录预览：

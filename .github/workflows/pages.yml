@@ -23,6 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Verify repository navigation
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
       - name: Build HTML index and collect tracked static assets
         run: python3 tools/build_pages.py
       - uses: actions/upload-pages-artifact@v3
