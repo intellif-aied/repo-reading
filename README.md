@@ -6,3 +6,5 @@
 | --- | --- |
 | [LayerFS](layerfs-analysis/README.md) | [分析目录](https://intellif-aied.github.io/repo-reading/layerfs-analysis/) |
 | [TeamAI CLI](teamai-cli-analysis/README.md) | [分析目录](https://intellif-aied.github.io/repo-reading/teamai-cli-analysis/) |
+| Agno | [分析目录](https://intellif-aied.github.io/repo-reading/agno-analysis/) |
+| WeKnora | [分析目录](https://intellif-aied.github.io/repo-reading/WeKnora-analysis/) |
